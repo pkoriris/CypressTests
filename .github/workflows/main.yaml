@@ -2,7 +2,11 @@ name: cypress Tests
 on: [push]
 jobs:
    npx cypress open:
+<<<<<<< HEAD
 	  run-on:ubuntu-latest
+=======
+	  run-on: windows-latest
+>>>>>>> ea9c3e4 (updating specs file)
 	 steps:
 		  -name:Checkout
 		  uses:actions/checkout@v2
