@@ -1,13 +1,14 @@
-name: cypress Tests
+name: Cypress Tests
 on: [push]
 jobs:
-   npx cypress open:
-	  run-on: windows-latest
-	 steps:
-		  -name:Checkout
-		  uses:actions/checkout@v2
-		  -name:Cypress.io
-		   uses:cypress-io/github-actions@v2.9
-		   with:
-		   build:npx cypress open
-		   browser:chrome
+ Cypress-Test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout GitCode
+       uses: actions/checkout@v2
+ 
+     - name: Run Cypress Test
+       uses: cypress-io/github-action@v4
+       with:
+         command: npx cypress run
+         browser: chrome
