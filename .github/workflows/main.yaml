@@ -2,7 +2,7 @@ name: cypress Tests
 on: [push]
 jobs:
    npx cypress open:
-	  run-on:windows-latest
+	  run-on: windows-latest
 	 steps:
 		  -name:Checkout
 		  uses:actions/checkout@v2
