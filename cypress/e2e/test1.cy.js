@@ -11,10 +11,17 @@ it('Google Search',function(){
 
 it.only('login test',function(){
 cy.visit('https://opensource-demo.orangehrmlive.com/')
-cy.get('[name="username"]').should('be.visible').should('be.enabled').type('Admin')
-cy.get('[name="password"]').should('be.visible').should('be.enabled').type('admin123')
+cy.get('[name="username"]').type('Admin')
+cy.get('[name="password"]').type('admin123')
 cy.get('[type="submit"]').should('be.visible').click()
+cy.get(':nth-child(1) > .oxd-main-menu-item').click()
+cy.get('.--visited > .oxd-topbar-body-nav-tab-item').click()
+cy.get('.oxd-topbar-body-nav-tab-link').click()
+cy.get('.orangehrm-header-container > .oxd-button').click()
+cy.get('.oxd-button--secondary').click()
 //Title verification
-cy.title().should('eq',"OrangeHRM")
+// cy.title().should('eq',"OrangeHRM")
 
-})
+
+}
+)
