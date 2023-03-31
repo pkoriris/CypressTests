@@ -1,7 +1,5 @@
 name: Cypress Tests
-on:
-  push:
-	  branches: [master]
+on: [push]
 jobs:
    npx cypress open:
 	  run-on:ubuntu-latest
